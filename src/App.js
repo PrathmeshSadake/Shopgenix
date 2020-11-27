@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+
+import Header from './components/Header/Header';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            userData : null,
+        }
+    }
+
+    getData = () => {
+        fetch('resume.json'
+        ,{
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        }
+        )
+          .then(function(response){
+            return response.json();
+          })
+          .then((resumeJson)=>{
+              this.setState({
+                  userData : resumeJson,
+              })
+            // console.log(resumeJson)
+          });
+      }
+
+    componentDidMount(){
+        this.getData();
+    }
+
+    render(){
+        return(
+            <div>
+                <Header />
+            </div>
+        )
+    }
 }
 
 export default App;
