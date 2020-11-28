@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+
+// Media queries for font sizes
+  
+@media (min-width: 350px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 650px) {
+  html,
+  body {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 800px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
