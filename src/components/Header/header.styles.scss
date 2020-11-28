@@ -1,0 +1,148 @@
+/*
+---------------------------------
+    custom components styling 
+---------------------------------
+*/
+.header-bg {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)),
+    url("https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background-position: top;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+// Text Box
+.text-box {
+  color: white;
+  margin: 100px auto 0 auto;
+  text-align: center;
+  word-spacing: 2px;
+  word-wrap: break-word;
+}
+
+.text-box span a:link,
+.text-box span a:visited {
+  text-decoration: none;
+  color: #ffe600;
+  transition: all 1s;
+}
+
+.text-box span a:active,
+.text-box span a:hover {
+  color: rgb(14, 223, 223);
+  border-bottom: 1px solid #ffe600;
+}
+
+.heading-text,
+.welcome-text {
+  font-size: 250%;
+  font-weight: 300;
+}
+
+.heading-text {
+  margin-bottom: 50px;
+}
+
+.welcome-text:after {
+  margin: 5px auto 40px auto;
+  height: 1px;
+  display: block;
+  text-align: center;
+  width: 275px;
+  background: aqua;
+  border-right: 1px solid #ffe600;
+  content: "";
+}
+
+.welcome-text img {
+  margin-top: -20px;
+}
+
+// custom button
+.custom-btn:link,
+.custom-btn:visited {
+  color: #ffe600;
+  text-decoration: none;
+  font-size: 100%;
+  border: 1px solid #ffe600;
+  padding: 10px 45px;
+  transition: all 0.8s;
+}
+
+.custom-btn:hover,
+.custom-btn:active {
+  background-color: #ffe600;
+  border-radius: 8px;
+  font-weight: 400;
+  color: black;
+}
+
+/*
+---------------------------------
+    Bootstrap classes styling 
+---------------------------------
+*/
+.bg-dark {
+  background-color: black;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:link,
+.nav-link:visited {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #ffe600 !important;
+  transition: all 0.8s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: aqua !important;
+  border-bottom: 1px solid #ffe600;
+}
+
+/*
+---------------------------------
+    Media Queries
+---------------------------------
+*/
+@media (min-width: 350px) {
+  .text-box {
+    width: 100%;
+    margin: 35px 1rem 0 1rem;
+  }
+  .header-bg {
+    height: 85vh;
+  }
+}
+@media (min-width: 600px) {
+  .text-box {
+    width: 100%;
+    margin: 45px auto 0 auto;
+  }
+  .header-bg {
+    height: 100vh;
+  }
+}
+@media (min-width: 800px) {
+  .text-box {
+    width: 50%;
+    margin: 200px auto 0 auto;
+  }
+  .header-bg {
+    height: 100vh;
+  }
+  .nav-link {
+    font-size: 110% !important;
+  }
+}
