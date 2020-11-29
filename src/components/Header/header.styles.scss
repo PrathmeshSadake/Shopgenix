@@ -136,6 +136,18 @@
 }
 @media (min-width: 800px) {
   .text-box {
+    width: 85%;
+    margin: 150px auto 0 auto;
+  }
+  .header-bg {
+    height: 100vh;
+  }
+  .nav-link {
+    font-size: 110% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .text-box {
     width: 50%;
     margin: 200px auto 0 auto;
   }
@@ -146,3 +158,4 @@
     font-size: 110% !important;
   }
 }
+

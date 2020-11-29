@@ -8,7 +8,8 @@ export default class Header extends Component {
             <Container fluid className="header-bg">
             <Row>
                <Col>
-                <Navbar sticky="top" collapseOnSelect expand="lg" variant="dark">
+               {/*Added these classes to Navbar component for fixed navbar:  fixed="top" sticky="top" */}
+                <Navbar collapseOnSelect expand="lg" variant="dark">
                      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                      <Navbar.Collapse id="responsive-navbar-nav">
                      <Nav className="mr-auto">
