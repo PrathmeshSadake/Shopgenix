@@ -1,6 +1,142 @@
+/*
+---------------------------------
+    Media Queries
+---------------------------------
+*/
+@media (min-width: 350px) {
+  .section-about {
+    height: 100vh;
+    padding: 5px;
+    text-align: center;
+  }
+  .heading-about {
+    margin: 50px 0 15px 0;
+  }
+  .copy-text {
+    font-size: 150%;
+  }
+  .section-about-img {
+    margin-top: 35px;
+    width: 100%;
+  }
+  .section-about-img img {
+    width: 100%;
+    padding: 8px;
+  }
+  .section-about-img img:hover {
+    width: 98%;
+    border: 3px solid #ffe600;
+  }
+}
+@media (min-width: 700px) {
+  .section-about {
+    height: 150vh;
+    padding: 10px;
+    text-align: center;
+  }
+  .heading-about {
+    margin: 50px 0 15px 0;
+  }
+  .copy-text {
+    font-size: 200%;
+  }
+  .section-about-img {
+    margin-top: 35px;
+    width: 100%;
+  }
+  .section-about-img img {
+    width: 100%;
+    padding: 8px;
+  }
+  .section-about-img img:hover {
+    width: 98%;
+    border: 3px solid #ffe600;
+  }
+}
+@media (min-width: 1000px) {
+  .section-about {
+    height: 70vh;
+    padding: 10px;
+    text-align: left;
+  }
+  .heading-about {
+    margin: 50px 0 15px 0;
+  }
+  .copy-text {
+    font-size: 100%;
+  }
+  .section-about-img {
+    margin-top: 35px;
+    width: 100%;
+  }
+  .section-about-img img {
+    width: 100%;
+    padding: 8px;
+  }
+  .section-about-img img:hover {
+    width: 98%;
+    border: 3px solid #ffe600;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-about {
+    height: 65vh;
+    padding: 50px;
+  }
+  .heading-about {
+    margin: 50px 0 15px 0;
+  }
+  .copy-text {
+    font-size: 100%;
+  }
+  .section-about-img {
+    margin-top: 35px;
+    width: 100%;
+  }
+  .section-about-img img {
+    width: 100%;
+    padding: 8px;
+  }
+  .section-about-img img:hover {
+    width: 98%;
+    border: 3px solid #ffe600;
+  }
+}
+
 .section-about {
-  height: 60vh;
-  padding: 70px;
+  // height: 60vh;
+  // padding: 70px;
   background-color: #424242;
   color: white;
+}
+.heading-about {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+  color: #ffe600;
+}
+.heading-about:hover,
+.heading-about:active {
+  color: aqua;
+}
+.copy-text {
+  letter-spacing: 1px;
+  font-weight: 300;
+  word-wrap: break-word;
+  line-height: 140%;
+}
+
+.section-about-img {
+  width: 100%;
+}
+.section-about-img img {
+  width: 100%;
+  padding: 10px;
+  transition: all 1s;
+}
+.section-about-img img:hover {
+  width: 98%;
+  border: 5px solid #ffe600;
 }
