@@ -1,0 +1,18 @@
+.icons-section {
+  margin-top: 2rem;
+  transition: all 1s;
+}
+.icons-section a:visited,
+.icons-section a:link {
+  margin-right: 30px;
+}
+.icons-section a:last-child {
+  margin-right: 0;
+}
+.icons-section a img {
+  height: 1.5rem;
+  transition: transform 0.8s;
+}
+.icons-section a img:hover {
+  transform: scale(1.15);
+}
