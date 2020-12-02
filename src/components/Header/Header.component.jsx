@@ -13,10 +13,10 @@ export default class Header extends Component {
                      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                      <Navbar.Collapse id="responsive-navbar-nav">
                      <Nav className="mr-auto">
-                     <Nav.Link href="#features">Home</Nav.Link>
-                     <Nav.Link href="#pricing">About</Nav.Link>
-                     <Nav.Link href="#deets">Resume</Nav.Link>
-                     <Nav.Link href="#memes">Projects</Nav.Link>
+                     <Nav.Link href="#home">Home</Nav.Link>
+                     <Nav.Link href="#about">About</Nav.Link>
+                     <Nav.Link href="#resume">Resume</Nav.Link>
+                     <Nav.Link href="#projects">Projects</Nav.Link>
                      </Nav>
                      </Navbar.Collapse>
                 </Navbar>
@@ -25,7 +25,7 @@ export default class Header extends Component {
             <Row>
                 <div className="text-box">
                     <h1 className="welcome-text">
-                    hello <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="50px" alt="shaking-hand-gif"></img>
+                    hello <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="shaking-hand-gif"></img>
                     </h1>
                     <h1 className="heading-text">
                         my name is <span><a href="testing">Prathmesh Sadake</a></span>, I'm a multi-disciplinary frontend web and mobile app developer.
