@@ -1,39 +1,39 @@
-import React, { Component } from 'react'
-import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Navigation from '../Navigation/Navigation.component';
+
 import './header.styles.scss';
 
 export default class Header extends Component {
     render() {
         return (
-            <Container fluid className="header-bg">
-            <Row>
-               <Col>
-               {/*Added these classes to Navbar component for fixed navbar:  fixed="top" sticky="top" */}
-                <Navbar collapseOnSelect expand="lg" variant="dark">
-                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                     <Navbar.Collapse id="responsive-navbar-nav">
-                     <Nav className="mr-auto">
-                     <Nav.Link href="#home">Home</Nav.Link>
-                     <Nav.Link href="#about">About</Nav.Link>
-                     <Nav.Link href="#resume">Resume</Nav.Link>
-                     <Nav.Link href="#projects">Projects</Nav.Link>
-                     </Nav>
-                     </Navbar.Collapse>
-                </Navbar>
-               </Col>
-            </Row>
-            <Row>
-                <div className="text-box">
+            <div className="section-header">
+                <Navigation/>
+                <Container fluid className="main-content">
+                <Row>
+                    <Col sm={8}>
                     <h1 className="welcome-text">
                     hello <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="shaking-hand-gif"></img>
                     </h1>
-                    <h1 className="heading-text">
-                        my name is <span><a href="testing">Prathmesh Sadake</a></span>, I'm a multi-disciplinary frontend web and mobile app developer.
-                    </h1>
-                    <a className="custom-btn" href="testing">more</a>
-                </div>
-            </Row>
-          </Container>
+                    <div className="text-box">
+                    <h2 className="heading-text">
+                        myself <span><a href="testing">Prathmesh Sadake</a></span>, I'm a multi-disciplinary frontend web and mobile app developer.
+                    </h2>
+                    <div className="view-more">
+                    <a href="#wel">
+                        View more &#8594;
+                    </a>
+                    </div>
+                    </div>
+                    </Col>
+                    <Col sm={4}>
+                        <div className="header-image">
+                        <img src={process.env.PUBLIC_URL + '/Assets/male2.svg'} alt=""/>
+                        </div>
+                    </Col>
+                </Row>
+                </Container>
+            </div>
         )
     }
 }
