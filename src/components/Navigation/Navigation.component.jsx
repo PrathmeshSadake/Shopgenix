@@ -7,7 +7,7 @@ export default class Navigation extends Component {
             <Navbar collapseOnSelect expand="lg" variant="dark">
       <Navbar.Brand href="#home">
       <img
-        src={process.env.PUBLIC_URL + '/logo.svg'}
+        src={process.env.PUBLIC_URL + '/logo.png'}
         width="65"
         height="65"
         className="d-inline-block align-top"

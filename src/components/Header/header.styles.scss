@@ -1,22 +1,9 @@
 @import "../../utilities/variables";
 
-@media only screen and (min-width: 950px) {
-  .section-header {
-    padding: 0 200px;
-  }
-  .main-content {
-    margin-top: 150px;
-    text-transform: capitalize;
-    font-family: "Coustard", serif;
-  }
-}
 .welcome-text {
   letter-spacing: 3.5px;
   font-size: 75px;
   color: $color-yellow-shade;
-  // background: -webkit-linear-gradient(50deg, $color-yellow-shade, $color-blue);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
 }
 .welcome-text img {
   height: 75px;
@@ -34,14 +21,18 @@
 }
 .heading-text span a {
   text-decoration: none;
+  color: $color-yellow-shade;
   transition: color 1s;
 }
 .heading-text span a:hover,
 .heading-text span a:active {
-  color: $color-yellow-shade;
+  color: rgb(156, 156, 156);
 }
 .view-more {
   margin-top: 55px;
+}
+.view-more a{
+  color: $color-yellow-shade;
 }
 .view-more a:link,
 .view-more a:visited {
@@ -55,5 +46,171 @@
   text-decoration: none;
   margin-left: 5px;
   font-size: 24px;
-  color: $color-yellow-shade;
+  color: rgb(156, 156, 156);
+}
+
+@media (max-width: 575px) {
+  .section-header {
+    padding: 0 3.5%;
+  }
+  .main-content {
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    text-align: center;
+  }
+  .welcome-text {
+    letter-spacing: 1.5px;
+    font-family: "Coustard", serif;
+    font-size: 400%;
+  }
+  .welcome-text img {
+    height: 50px;
+    margin-top: -38px;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+  .heading-text {
+    line-height: 115%;
+    font-size: 180%;
+    letter-spacing: 1.5px;
+  }
+  .view-more {
+    margin: 25px 0;
+  }
+  .view-more a:link,
+  .view-more a:visited {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .view-more a:hover,
+  .view-more a:active {
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 992px) {
+  .section-header {
+    padding: 0 3.5%;
+  }
+  .main-content {
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    text-align: left;
+  }
+  .welcome-text {
+    letter-spacing: 1.5px;
+    font-family: "Coustard", serif;
+    font-size: 400%;
+    color: $color-yellow-shade;
+  }
+  .welcome-text img {
+    height: 50px;
+    margin-top: -30px;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+  .heading-text {
+    line-height: 115%;
+    font-size: 180%;
+    letter-spacing: 1.5px;
+    word-wrap: break-word;
+  }
+  .heading-text span a {
+    text-decoration: none;
+    transition: color 1s;
+  }
+  .view-more {
+    margin: 25px 0;
+  }
+  .view-more a:link,
+  .view-more a:visited {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .view-more a:hover,
+  .view-more a:active {
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .section-header {
+    padding: 0 2.5%;
+  }
+  .main-content {
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    text-align: left;
+  }
+  .welcome-text {
+    letter-spacing: 1.5px;
+    font-family: "Coustard", serif;
+    font-size: 400%;
+  }
+  .welcome-text img {
+    height: 50px;
+    margin-top: -50px;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+  .heading-text {
+    font-size: 200%;
+    letter-spacing: 1.5px;
+  }
+  .view-more {
+    margin: 25px 0;
+  }
+  .view-more a:link,
+  .view-more a:visited {
+    font-size: 20px;
+  }
+  .view-more a:hover,
+  .view-more a:active {
+    margin-left: 5px;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-header {
+    padding: 0 100px;
+  }
+  .main-content {
+    margin-top: 150px;
+    text-transform: capitalize;
+    font-family: "Coustard", serif;
+  }
+  .header-image img {
+    margin-top: -50px;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .section-header {
+    padding: 0 200px;
+  }
+  .main-content {
+    margin-top: 150px;
+    text-transform: capitalize;
+    font-family: "Coustard", serif;
+  }
+  .header-image img {
+    margin-top: -80px;
+  }
 }

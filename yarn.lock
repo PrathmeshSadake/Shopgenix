@@ -1631,9 +1631,9 @@
     "@testing-library/dom" "^7.28.1"
 
 "@testing-library/user-event@^12.1.10":
-  version "12.2.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.2.2.tgz#22d0047da745289335240f523dfe74c889ec96cb"
-  integrity sha512-mTYL9LrwiSeyorStUOMuRGQDn1ca40tIhuv//o/K3lY8wBEp+9Im90MFVx5i3u7zCPmavn3uWZs/10chsbI8Tg==
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.5.0.tgz#7c6f69cee4dbd11037ac9c3f62c5d81b9a4ccf30"
+  integrity sha512-9uXr4+OwjHVUxzdfYZ2yCnF3xlEzr8cZOdqjGnqD8Qb1NoCJrm7UXxG3RUpL2QqcqZ1eqVuxkFJTCky5Yit+XQ==
   dependencies:
     "@babel/runtime" "^7.10.2"
 
@@ -1748,9 +1748,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@*":
-  version "26.0.15"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.15.tgz#12e02c0372ad0548e07b9f4e19132b834cb1effe"
-  integrity sha512-s2VMReFXRg9XXxV+CW9e5Nz8fH2K1aEhwgjUqPPbQd7g95T0laAcvLv032EhFHIa5GHsZ8W7iJEQVaJq6k3Gog==
+  version "26.0.16"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.16.tgz#b47abd50f6ed0503f589db8e126fc8eb470cf87c"
+  integrity sha512-Gp12+7tmKCgv9JjtltxUXokohCAEZfpJaEW5tn871SGRp8I+bRWBonQO7vW5NHwnAHe5dd50+Q4zyKuN35i09g==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"

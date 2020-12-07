@@ -27,26 +27,32 @@ body {
 }
 
 .nav-link:link,
-.nav-link:visited{
+.nav-link:visited {
   font-size: 125%;
-  margin: 0 15px ;
+  margin: 0 15px;
   color: $color-yellow-shade !important;
   transition: all 0.6s;
 }
 .nav-link:hover,
-.nav-link:active{
+.nav-link:active {
   color: #f7f7f7 !important;
   transform: scale(0.95);
 }
 
 .nav-link:last-child:link,
-.nav-link:last-child:visited{
+.nav-link:last-child:visited {
   border: 2px solid $color-pink-shade !important;
   border-radius: 150px;
   color: #fff !important;
   transition: all 1s;
 }
 .nav-link:last-child:hover,
-.nav-link:last-child:active{
+.nav-link:last-child:active {
   background-color: $color-pink-shade;
+}
+
+@media (max-width: 1200px) {
+  .nav-link:last-child {
+    display: none;
+  }
 }
