@@ -13,15 +13,15 @@ export default class Header extends Component {
                 <Row>
                     <Col sm={8}>
                     <h1 className="welcome-text">
-                    hello <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="shaking-hand-gif"></img>
+                    hello! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="shaking-hand-gif"></img>
                     </h1>
                     <div className="text-box">
                     <h2 className="heading-text">
-                        myself <span><a href="testing">Prathmesh Sadake</a></span>, I'm a multi-disciplinary frontend web and mobile app developer.
+                        myself <span><a href="testing">Prathmesh Sadake</a></span>, I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
                     </h2>
                     <div className="view-more">
                     <a href="#wel">
-                        View more &#8594;
+                        Get in touch &#8594; prathmeshsadake@gmail.com
                     </a>
                     </div>
                     </div>

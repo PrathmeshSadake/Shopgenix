@@ -4,12 +4,12 @@ import { Navbar, Nav } from 'react-bootstrap';
 export default class Navigation extends Component {
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg" variant="dark">
+            <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="#home">
       <img
         src={process.env.PUBLIC_URL + '/logo.png'}
-        width="65"
-        height="65"
+        width="45"
+        height="45"
         className="d-inline-block align-top"
         alt=""
       />
