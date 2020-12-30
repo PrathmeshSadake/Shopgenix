@@ -1,15 +1,12 @@
 import React from 'react';
+import About from '../components/About';
+import Skills from '../components/Skills';
 
-// Importing Components
-import Header from '../components/Header';
-
-import Contact from '../components/Contact';
 
 const AboutPage = () => {
     return(
         <>
-        <Header/>
-        <Contact/>
+            <About/>
         </>
     );
 }
