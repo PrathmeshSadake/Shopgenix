@@ -10,15 +10,12 @@ const Header = () => {
     return(
         <StyledDiv>
             <TextBoxDiv>
-            <h1 className="welcome-text">
-                    hello! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="shaking-hand-gif"></img>
-                    </h1>
                     <h2 className="heading-text">
                         myself <span>Prathmesh Sadake</span>, I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
                     </h2>
             </TextBoxDiv>
             <StyledImgDiv>
-            <img src={headerImg} height="750px" alt="Boy illustration"/>
+            <img src={headerImg} height="650px" alt="Boy illustration"/>
             </StyledImgDiv>
         </StyledDiv>
     );
