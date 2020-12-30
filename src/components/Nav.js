@@ -16,16 +16,16 @@ function openNav() {
   }
     return(
         <StyledNav>
-          <div>
+          <Link to='/'>
             <img src={logo} width="45px" alt="navbar-logo"/>
-            <StyledNameLogo> Prathmesh.</StyledNameLogo>
-          </div>
+            {/* <StyledNameLogo> Hello!</StyledNameLogo> */}
+          </Link>
             <div id="myNav" className="overlay">
 <Link className="closebtn" onClick={closeNav}>&times;</Link>
 <div className="overlay-content">
-  <Link to="/" onClick={closeNav}>About</Link>
-  <Link to="/" onClick={closeNav}>Services</Link>
-  <Link to="/" onClick={closeNav}>Clients</Link>
+<Link to="/" onClick={closeNav}>Home</Link>
+  <Link to="/about" onClick={closeNav}>About</Link>
+  <Link to="/projects" onClick={closeNav}>Projects</Link>
   <Link to="/contact" onClick={closeNav}>Contact</Link>
 </div>
 
@@ -40,6 +40,7 @@ function openNav() {
 
 
 const StyledNav = styled.nav`
+  min-height: 8vh;
   display:flex;
   justify-content: space-between;
   padding: 1rem 8rem 0.2rem 8rem;
