@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import GlobalStyle from './GlobalStyle';
 import { StyledDiv } from '../styles';
 
-import Wave from './Wave';
+import { Wave } from './Wave';
 
 import headerImg from '../img/header.svg';
 import { Link } from 'react-router-dom';
