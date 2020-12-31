@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import { Switch, Route } from 'react-router-dom';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 const App = () => {
     return(
@@ -20,6 +21,9 @@ const App = () => {
             </Route>
             <Route path="/about">
             <AboutPage />
+            </Route>
+            <Route path="/projects">
+            <ProjectsPage />
             </Route>
             <Route path="/contact">
             <ContactPage />
