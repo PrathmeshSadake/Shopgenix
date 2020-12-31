@@ -26,7 +26,7 @@ color: #000;
 text-align:center;
 justify-content: space-around;
 align-items:center;
-margin: 1rem 0;
+margin: 2rem 0;
 `;
 
 
@@ -34,7 +34,13 @@ const StyledSocialSpan = styled.div`
     /* a{
         text-decoration: none;
     } */
+    z-index: 5;
     .social-icon{
         margin: 0 1rem;
+        color: #66fcf1;
+        transition: color 0.75s ease;
+        &:hover{
+            color:#45a293;
+        }
     }
 `;
