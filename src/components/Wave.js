@@ -25,5 +25,5 @@ export function Wave2(){
 }
 
 const StyledWaveSvg2 = styled(StyledWaveSvg)`
-z-index: 100;
+z-index: 1;
 `;
