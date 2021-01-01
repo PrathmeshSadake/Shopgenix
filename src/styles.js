@@ -7,6 +7,11 @@ export const StyledDiv = styled.div`
     justify-content:space-between;
     align-items:center;
     color: #fff;
+    @media (max-width: 1200px){
+        display: flex;
+        flex-flow: column-reverse;
+        padding: 0rem;
+    }
 `;
 
 export const StyledLine = styled.div`

@@ -47,11 +47,19 @@ const StyledNav = styled.nav`
   align-items:center;
   color:#fff;
   background-color: #1f2833; 
+  @media (max-width:900px){
+  padding: 0.5rem 5rem 0.1rem 5rem;
+            
+        }
+        @media (max-width:520px){
+  padding: 0.5rem 2rem 0.1rem 2rem;
+            
+        }
 `;
 
-const StyledNameLogo = styled.span`
-  margin-top : -26px;
-  font-size: 35px;
-`;
+// const StyledNameLogo = styled.span`
+//   margin-top : -26px;
+//   font-size: 35px;
+// `;
 
 export default Nav;

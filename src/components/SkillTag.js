@@ -20,4 +20,8 @@ const StyledSkillTag = styled.div`
     border: 1px solid #66fcf1;
     border-radius: 5px;
     color: white;
+
+    @media (max-width: 1200px){
+        margin: 8px 5px;
+    }
 `;
