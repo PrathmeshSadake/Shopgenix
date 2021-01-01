@@ -20,6 +20,15 @@ const GlobalStyle = createGlobalStyle`
         @media (max-width:1700px){
             font-size: 80%;
         }
+        @media (max-width:1300px){
+            font-size: 75%;
+        }
+        @media (max-width:900px){
+            font-size: 70%;
+        }
+        @media (max-width:520px){
+            font-size: 60%;
+        }
     }
     body{
         background-color: #0b0c10;
@@ -29,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     }
     button{
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         cursor: pointer;
         padding: 0.5rem 1.5rem;
         border: 2px solid #66fcf1;
@@ -37,16 +46,27 @@ const GlobalStyle = createGlobalStyle`
         background: transparent;
         color:white;
         transition: all 0.7s ease;
+        margin: 10px 0rem;
+        &:hover{
+            background-color: #66fcf1;
+            color: #000;
+
+        }
         a{text-decoration: none;
             text-transform: capitalize;
             color: #fff;
-            &:hover{
-                color: #000;
-            }
         }
-        &:hover{
-            background-color: #66fcf1;
+
+        @media (max-width:1300px){
+            a{text-decoration: none;
+                font-size: 2rem;
+            text-transform: capitalize;
+            color: #fff;
         }
+
+           
+        }
+
     }
     h2{
         font-weight: 500;
@@ -55,6 +75,7 @@ const GlobalStyle = createGlobalStyle`
     }
     h3{
         color: white;
+        font-size: 2rem
     }
     h4{
         font-weight: bold;
@@ -76,6 +97,9 @@ const GlobalStyle = createGlobalStyle`
         color: #c5c6c7;
         font-size: 1.4rem;
         line-height: 150%;
+        @media (max-width: 760px){
+        font-size: 1.65rem
+    }
     }
 `;
 
