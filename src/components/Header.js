@@ -14,7 +14,7 @@ const Header = () => {
         <StyledDiv>
             <TextBoxDiv>
                     <h2 className="heading-text">
-                        Myself <span>Prathmesh Sadake</span>, I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
+                        Myself <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
                     </h2>
                     <button>
                         <Link className="btn-primary" to='/about'>
@@ -38,9 +38,31 @@ const TextBoxDiv = styled.div`
         word-wrap:break-word;
         margin-bottom: 4rem;
     }
+    @media (max-width: 1200px){
+    margin: 0rem;
+    text-align: center;
+    .heading-text{
+        line-height:110%;
+        word-wrap: word-break;
+    }
+    }
+    @media (max-width: 700px){
+        .name{
+            display:block;
+        }
+    }
 `;
 const StyledImgDiv = styled.div`
     flex: 1;
+    @media (max-width: 1200px){
+        text-align: center;
+        justify-content: center;
+    
+    img{
+        margin: 3rem auto;
+        height: 350px;
+    }
+    }
 `;
 
 

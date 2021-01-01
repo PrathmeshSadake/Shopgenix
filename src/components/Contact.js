@@ -59,6 +59,9 @@ const ContactSection = styled.div`
     .footer-contact{
         font-size:1rem;
     }
+    @media (max-width: 1200px){
+        width:90%;
+    }
 `;
 
 

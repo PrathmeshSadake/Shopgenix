@@ -2,84 +2,94 @@ import React from 'react'
 
 import {StyledDiv, StyledLine} from '../styles';
 
-import {  Link } from 'react-router-dom';
+// import {  Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 import SkillTag from './SkillTag';
 
-export default function ProjectComponent() {
-    const projects = [{
-        "title" : 'Unsplashy',
-        "description" : 'An image gallery which fetches images from unsplash api. It has some awesome features like searching for images and infinite scrolling in which images keeps on loading as user scrolls',
-        "imageUrl" : '../img/me.jpg',
-        "technologies" : ['React', 'react-bootstrap', 'css', 'newsapi.org'],
-        "githubUrl" : 'https://www.github.com/PrathmeshSadake',
-      },
-      {
-        "title" : 'Unsplashy',
-        "description" : 'An image gallery which fetches images from unsplash api. It has some awesome features like searching for images and infinite scrolling in which images keeps on loading as user scrolls',
-        "imageUrl" : '../img/me.jpg',
-        "technologies" : ['React', 'react-bootstrap', 'css', 'newsapi.org'],
-        "githubUrl" : 'https://www.github.com/PrathmeshSadake',
-      },
-      {
-        "title" : 'Unsplashy',
-        "description" : 'An image gallery which fetches images from unsplash api. It has some awesome features like searching for images and infinite scrolling in which images keeps on loading as user scrolls',
-        "imageUrl" : '../img/me.jpg',
-        "technologies" : ['React', 'react-bootstrap', 'css', 'newsapi.org'],
-        "githubUrl" : 'https://www.github.com/PrathmeshSadake',
-      }
-    ];
+import { AiFillGithub } from "react-icons/ai";
+
+// importing images for projects
+// import omnifood from '../img/projects/omnifood.PNG';
+// import newscast from '../img/projects/newscast.jpg';
+// import unsplashy from '../img/projects/unsplashy.png';
+
+
+export default function ProjectComponent({project}) {
+    
     return (
-        <>
-            {projects.map((project)=>{ 
-                return (
-                    <StyledAboutSection>
+                    <StyledProjectSection>
+                    <StyledLine className="mobile-line"/>
                     <StyledImgContainer>
-                        <img src='https://images.unsplash.com/photo-1602524207251-8ad5d2b2c303?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' alt="about me" width="75%" />
+                        <img src={project.imageUrl} alt="" width='90%'/>
                     </StyledImgContainer>
-                    <StyledAboutme>
+                    <StyledProject>
                     <h2>{project.title}</h2>
-                    <StyledLine/>
+                    <h3 className="subtitle">{project.subtitle}</h3>
+                    <StyledLine className="desktop-line"/>
                         <p style={{color:'whitesmoke'}}>{project.description}</p>
-                        <StyledSkillsSection>
+                        <StyledProjectsTools>
                             {project.technologies.map((tech)=><SkillTag skill={tech}/>)}
-                        </StyledSkillsSection>
+                        </StyledProjectsTools>
                             <button> <a href={project.githubUrl}>
-                             view on github
+                             <AiFillGithub size="30px"/>
                             </a></button>
-                    </StyledAboutme>
-                    </StyledAboutSection>
-                )
-            })}
-        </>
-    )
+                    </StyledProject>
+                    </StyledProjectSection>
+    );
 }
 
 
 
-const StyledAboutSection = styled(StyledDiv)`
-height: 90vh
+const StyledProjectSection = styled(StyledDiv)`
+.mobile-line{
+    display: none;
+}
+@media (max-width: 1200px){
+        display: block;
+        padding: 0rem;
+        width: 100%;
+        text-align: center;
+        .desktop-line{
+    margin: 5rem 0;
+            display: none;
+        }
+        .mobile-line{
+    margin: 5rem 0;
+    display: block;
+}
+    }
 `;
 
 const StyledImgContainer = styled.div`
 flex: 1.25;
-/* padding-right: 5rem; */
 `;
-const StyledAboutme = styled.div`
-flex: 1;
-button{
-margin-right:3rem;
 
+const StyledProject = styled.div`
+flex: 1;
+padding: 0 2rem;
+.subtitle{
+    margin: 1rem 0;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    font-weight:300;
+    font-size: 1.5rem;
 }
-.btn-icon{
-color: yellow;
-padding-top: 5px;
+button a svg{
+    margin: 0;
 }
+h2{
+    margin-top: 2rem
+}
+
 `;
-const StyledSkillsSection = styled.div`
+const StyledProjectsTools = styled.div`
     margin: 20px 0;
     width: 80%;
     display:flex;
     flex-wrap: wrap;
+    @media (max-width: 1200px){
+    justify-content: center;
+        width: 100%;
+    }
 `;
