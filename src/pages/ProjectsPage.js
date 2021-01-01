@@ -10,7 +10,7 @@ const ProjectsPage = () => {
         "subtitle" : 'Free stock images React Application',
         "description" : 'An image gallery which fetches images from unsplash api. It has some awesome features like searching for images and infinite scrolling in which images keeps on loading as user scrolls',
         "imageUrl" : process.env.PUBLIC_URL + '/projects/unsplashy.png',
-        "technologies" : ['React', 'react-bootstrap', 'css', 'newsapi.org'],
+        "technologies" : ['React', 'react-bootstrap', 'css', 'unsplash-api'],
         "githubUrl" : 'https://www.github.com/PrathmeshSadake/unsplashy',
       },
       // {
@@ -26,7 +26,7 @@ const ProjectsPage = () => {
         "subtitle" : 'Responsive Restaurant website',
         "description" : 'Responsive restaurant website for Omnifood. Omnifood is a premium food delivery service with the mission to bring affordable and healthy meals to as many people as possilbe.',
         "imageUrl" : process.env.PUBLIC_URL + '/projects/omnifood.png',
-        "technologies" : ['React', 'react-bootstrap', 'css', 'newsapi.org'],
+        "technologies" : ['Html', 'css', 'javascript'],
         "githubUrl" : 'https://www.github.com/PrathmeshSadake/omnifood',
       },
       {
@@ -34,7 +34,7 @@ const ProjectsPage = () => {
         "subtitle" : 'Personal Portfolio made with React . js',
         "description" : 'Personal portfolio to display the samples of my work, details about myself, completed projects in the past and better explain to employers why they must hire me.',
         "imageUrl" : process.env.PUBLIC_URL + '/projects/devfolio.png',
-        "technologies" : ['React', 'react-bootstrap', 'css', 'newsapi.org'],
+        "technologies" : ['React', 'javascript', 'html', 'css', 'framer-motion'],
         "githubUrl" : 'https://www.github.com/PrathmeshSadake/devfolio',
       }
     ];
