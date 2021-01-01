@@ -27,10 +27,10 @@ const About = () => {
                 </StyledSkillsSection>
                 <div>
                 <button><Link to='/projects'>
-                        see my work <AiOutlineArrowRight size="20px" className="btn-icon"/>
+                       See my work <AiOutlineArrowRight size="20px" className="btn-icon"/>
                     </Link></button>
                     <button> <Link to='/contact'>
-                        <AiOutlineMail size="20px" className="btn-icon"/> get in touch
+                    <AiOutlineMail size="20px" className="btn-icon"/> Get in touch
                     </Link></button>
                 </div>
             </StyledAboutme>
@@ -39,10 +39,15 @@ const About = () => {
 }
 
 const StyledAboutSection = styled(StyledDiv)`
+        padding-top: 10vh ;
+
+
     .divider{
         display:none;
     }
     @media (max-width: 1200px){
+margin-top: 1.5rem;
+
         display: block;
     padding: 2rem 2.5rem;
         width: 100%;
@@ -59,11 +64,17 @@ const StyledImgContainer = styled.div`
     img{
         width: 90%;
     }
+    @media (max-width: 1200px){
+        img{
+            margin-top: 10rem;
+        }
+
+    }
 `;
 const StyledAboutme = styled.div`
     flex: 1.25;
     button{
-        margin-right:3rem;
+        margin: 1.5rem;
     }
     .btn-icon{
         color: yellow;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledDiv = styled.div`
     min-height: 90vh;
     padding: 0rem 8rem;
+    padding-top: 10rem;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -11,6 +12,8 @@ export const StyledDiv = styled.div`
         display: flex;
         flex-flow: column-reverse;
         padding: 0rem;
+    padding-top: 10rem ;
+
     }
 `;
 

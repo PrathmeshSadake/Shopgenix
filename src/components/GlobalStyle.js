@@ -37,8 +37,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
     }
     button{
-        font-weight: 500;
-        font-size: 1.75rem;
+        font-weight: 700;
+        font-size: 2rem;
         cursor: pointer;
         padding: 0.5rem 1.5rem;
         border: 2px solid #66fcf1;
@@ -46,14 +46,14 @@ const GlobalStyle = createGlobalStyle`
         background: transparent;
         color:white;
         transition: all 0.7s ease;
-        margin: 10px 0rem;
+        margin: 1rem 0rem;
         &:hover{
             background-color: #66fcf1;
             color: #000;
 
         }
         a{text-decoration: none;
-            text-transform: capitalize;
+            /* text-transform: capitalize; */
             color: #fff;
         }
 

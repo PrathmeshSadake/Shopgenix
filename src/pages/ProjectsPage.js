@@ -48,12 +48,13 @@ const ProjectsPage = () => {
 }
 
 const StyledProjectPage = styled.div`
+        padding-top: 10vh ;
+
     h1{
 text-align: center;
         font-size: 5rem;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-        margin: 3rem 0;
         letter-spacing: 4px;
         color: #66fcf1;
     }

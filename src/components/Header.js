@@ -14,11 +14,11 @@ const Header = () => {
         <StyledDiv>
             <TextBoxDiv>
                     <h2 className="heading-text">
-                        Myself <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
+                        Hello, I'm <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
                     </h2>
                     <button>
                         <Link className="btn-primary" to='/about'>
-                        About me &#x1F449;
+                        <h3>About me &#x1F449;</h3>
                     </Link></button>
             </TextBoxDiv>
             <StyledImgDiv>
@@ -40,15 +40,18 @@ const TextBoxDiv = styled.div`
     }
     @media (max-width: 1200px){
     margin: 0rem;
+    padding: 0 2rem;
     text-align: center;
     .heading-text{
         line-height:110%;
         word-wrap: word-break;
+        font-size: 2.5rem;
     }
     }
     @media (max-width: 700px){
         .name{
             display:block;
+        font-size: 2.5rem;
         }
     }
 `;

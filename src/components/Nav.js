@@ -41,6 +41,11 @@ function openNav() {
 
 const StyledNav = styled.nav`
   min-height: 8vh;
+  position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    right: 0;
+    top: 0;
+    width: 100%;
   display:flex;
   justify-content: space-between;
   padding: 1rem 8rem 0.2rem 8rem;

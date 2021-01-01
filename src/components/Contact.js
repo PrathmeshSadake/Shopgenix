@@ -23,6 +23,7 @@ const Contact =()=>{
 }
 
 const StyledContact = styled.div`
+        padding-top: 10vh ;
     min-height: 92vh;
     background-color: #1f2833;
     display:flex;
