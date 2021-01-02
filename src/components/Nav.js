@@ -18,7 +18,6 @@ function openNav() {
         <StyledNav>
           <Link to='/'>
             <img src={logo} width="45px" alt="navbar-logo"/>
-            {/* <StyledNameLogo> Hello!</StyledNameLogo> */}
           </Link>
             <div id="myNav" className="overlay">
 <Link className="closebtn" onClick={closeNav}>&times;</Link>
@@ -62,9 +61,5 @@ const StyledNav = styled.nav`
         }
 `;
 
-// const StyledNameLogo = styled.span`
-//   margin-top : -26px;
-//   font-size: 35px;
-// `;
 
 export default Nav;

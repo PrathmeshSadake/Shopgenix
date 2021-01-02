@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import GlobalStyle from './GlobalStyle';
 import { StyledDiv } from '../styles';
 
 import { Wave } from './Wave';
@@ -12,19 +11,20 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return(
         <StyledDiv>
+                    <Wave/>
             <TextBoxDiv>
                     <h2 className="heading-text">
                         Hello, I'm <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
                     </h2>
                     <button>
                         <Link className="btn-primary" to='/about'>
-                        <h3>About me &#x1F449;</h3>
+                        <h3>&#x1F449;</h3>
                     </Link></button>
+                    
             </TextBoxDiv>
             <StyledImgDiv>
             <img src={headerImg} height="650px" alt="Boy illustration"/>
             </StyledImgDiv>
-            <Wave/>
         </StyledDiv>
     );
 }
@@ -36,11 +36,11 @@ const TextBoxDiv = styled.div`
         letter-spacing: 1.5px;
         line-height:125%;
         word-wrap:break-word;
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
     }
     @media (max-width: 1200px){
     margin: 0rem;
-    padding: 0 2rem;
+    padding: 0 2rem 5rem 2rem;
     text-align: center;
     .heading-text{
         line-height:110%;

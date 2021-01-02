@@ -33,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
     body{
         background-color: #0b0c10;
         overflow-x: hidden;
-        /* font-family: 'Lato', sans-serif; */
         font-family: 'Montserrat', sans-serif;
     }
     button{
@@ -53,7 +52,6 @@ const GlobalStyle = createGlobalStyle`
 
         }
         a{text-decoration: none;
-            /* text-transform: capitalize; */
             color: #fff;
         }
 

@@ -2,17 +2,11 @@ import React from 'react'
 
 import {StyledDiv, StyledLine} from '../styles';
 
-// import {  Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 import SkillTag from './SkillTag';
 
 import { AiFillGithub } from "react-icons/ai";
-
-// importing images for projects
-// import omnifood from '../img/projects/omnifood.PNG';
-// import newscast from '../img/projects/newscast.jpg';
-// import unsplashy from '../img/projects/unsplashy.png';
 
 
 export default function ProjectComponent({project}) {

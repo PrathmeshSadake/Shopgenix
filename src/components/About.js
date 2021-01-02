@@ -27,10 +27,10 @@ const About = () => {
                 </StyledSkillsSection>
                 <div>
                 <button><Link to='/projects'>
-                       See my work <AiOutlineArrowRight size="20px" className="btn-icon"/>
+                        <AiOutlineArrowRight size="20px" className="btn-icon"/>
                     </Link></button>
                     <button> <Link to='/contact'>
-                    <AiOutlineMail size="20px" className="btn-icon"/> Get in touch
+                    <AiOutlineMail size="20px" className="btn-icon"/>
                     </Link></button>
                 </div>
             </StyledAboutme>
@@ -75,12 +75,7 @@ const StyledAboutme = styled.div`
     flex: 1.25;
     button{
         margin: 1.5rem;
-    }
-    .btn-icon{
-        color: yellow;
-        padding-top: 5px;
-    }
-    
+    }    
 `;
 const StyledSkillsSection = styled.div`
     margin: 20px 0;
