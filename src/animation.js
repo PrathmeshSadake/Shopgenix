@@ -25,7 +25,7 @@ show:{
     y:0,
     transition:{
         duration:1,
-        ease:"easeOut"
+        ease:"easeIn"
     }
 } 
 }
@@ -37,7 +37,7 @@ export const fade = {
     show:{
         opacity:1,
         transition:{
-            ease:'easeOut',
+            ease:'easeIn',
             duration:2
         }
     }
@@ -51,7 +51,7 @@ export const photoAnimation = {
         scale:1,
         opacity:1,
         transition:{
-            ease:'easeOut',
+            ease:'easeIn',
             duration:0.75
         }
     }
@@ -65,22 +65,22 @@ width: '0%',
     show:{
 width:'100%',
         transition:{
-            ease:'easeOut',
-            duration: 5
+            ease:'easeIn',
+            duration: 3
         }
     }
 }
 
 export const slider = {
     hidden:{
-        x: '-130%',
+        x: '-50%',
         skew: '45deg',
     },
     show:{
-        x: '200%',
+        x: '1000%',
         transition:{
-            duration:2,
-            ease:'easeOut'
+            duration: 5,
+            ease:'easeIn'
         }
     }
 }
@@ -92,8 +92,8 @@ opacity: 0
     show:{
         opacity: 1,
         transition:{
-            staggerChildren: 0.2,
-            ease:'easeOut'
+            staggerChildren: 0.5,
+            ease:'easeIn'
         }
     }
 }

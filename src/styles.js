@@ -10,6 +10,7 @@ export const StyledDiv = styled.div`
     justify-content:space-between;
     align-items:center;
     color: #fff;
+    /* overflow: hidden; */
     @media (max-width: 1200px){
         display: flex;
         flex-flow: column-reverse;
