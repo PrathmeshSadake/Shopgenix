@@ -4,6 +4,11 @@ import styled from  'styled-components';
 // Importing Components
 import ProjectComponent from '../components/ProjectComponent';
 
+import { motion } from 'framer-motion';
+import { pageAnimation, titleAnimation, fade } from '../animation';
+
+import ScrollTop from '../components/ScrollTop';
+
 const ProjectsPage = () => {
     const projects = [{
         "title" : 'Unsplashy',
@@ -39,15 +44,16 @@ const ProjectsPage = () => {
       }
     ];
     return(
-        <StyledProjectPage>
-        <h1 className="title">Projects</h1>
+        <StyledProjectPage variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+        <motion.h1 variants={titleAnimation} className="title">projects</motion.h1>
         {projects.map((project)=> 
-        <ProjectComponent project={project} />)}
+        <ProjectComponent variants={fade} project={project} />)}
+      <ScrollTop/>
         </StyledProjectPage>
     );
 }
 
-const StyledProjectPage = styled.div`
+const StyledProjectPage = styled(motion.div)`
         padding-top: 10vh ;
 
     h1{

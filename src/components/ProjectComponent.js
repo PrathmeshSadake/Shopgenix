@@ -8,26 +8,27 @@ import SkillTag from './SkillTag';
 
 import { AiFillGithub } from "react-icons/ai";
 
+import {motion} from 'framer-motion';
+import { photoAnimation, fade, lineAnimation } from '../animation';
 
-export default function ProjectComponent({project}) {
-    
+export default function ProjectComponent({project}) {    
     return (
                     <StyledProjectSection>
-                    <StyledLine className="mobile-line"/>
+                    <StyledLine variants={lineAnimation} className="mobile-line"/>
                     <StyledImgContainer>
-                        <img src={project.imageUrl} alt="" width='90%'/>
+                        <motion.img variants={photoAnimation} src={project.imageUrl} alt="" width='90%'/>
                     </StyledImgContainer>
                     <StyledProject>
-                    <h2>{project.title}</h2>
-                    <h3 className="subtitle">{project.subtitle}</h3>
-                    <StyledLine className="desktop-line"/>
-                        <p style={{color:'whitesmoke'}}>{project.description}</p>
-                        <StyledProjectsTools>
+                    <motion.h2 variants={fade}>{project.title}</motion.h2>
+                    <motion.h3 variants={fade} className="subtitle">{project.subtitle}</motion.h3>
+                    <StyledLine variants={lineAnimation} className="desktop-line"/>
+                        <motion.p variants={fade} style={{color:'whitesmoke'}}>{project.description}</motion.p>
+                        <StyledProjectsTools variants={fade}>
                             {project.technologies.map((tech)=><SkillTag skill={tech}/>)}
                         </StyledProjectsTools>
-                            <button> <a href={project.githubUrl}>
+                            <motion.button variants={fade}> <a href={project.githubUrl}>
                              <AiFillGithub size="30px"/>
-                            </a></button>
+                            </a></motion.button>
                     </StyledProject>
                     </StyledProjectSection>
     );
@@ -36,6 +37,8 @@ export default function ProjectComponent({project}) {
 
 
 const StyledProjectSection = styled(StyledDiv)`
+    padding-top: 5rem;
+
 .mobile-line{
     display: none;
 }
@@ -77,7 +80,7 @@ h2{
 }
 
 `;
-const StyledProjectsTools = styled.div`
+const StyledProjectsTools = styled(motion.div)`
     margin: 20px 0;
     width: 80%;
     display:flex;

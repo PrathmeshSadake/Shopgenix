@@ -8,28 +8,31 @@ import headerImg from '../img/header.svg';
 import { Link } from 'react-router-dom';
 
 
+import {motion} from 'framer-motion';
+import { titleAnimation, fade } from '../animation';
+
 const Header = () => {
     return(
-        <StyledDiv>
+        <StyledDiv variants={fade}>
                     <Wave/>
-            <TextBoxDiv>
-                    <h2 className="heading-text">
+            <TextBoxDiv variants={titleAnimation}>
+                    <motion.h2 variants={titleAnimation} className="heading-text">
                         Hello, I'm <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
-                    </h2>
-                    <button>
+                    </motion.h2>
+                    <motion.button variants={fade}>
                         <Link className="btn-primary" to='/about'>
-                        <h3>&#x1F449;</h3>
-                    </Link></button>
+                        <motion.h3>&#x1F449;</motion.h3>
+                    </Link></motion.button>
                     
             </TextBoxDiv>
             <StyledImgDiv>
-            <img src={headerImg} height="650px" alt="Boy illustration"/>
+            <motion.img variants={fade} src={headerImg} height="650px" alt="Boy illustration"/>
             </StyledImgDiv>
         </StyledDiv>
     );
 }
 
-const TextBoxDiv = styled.div`
+const TextBoxDiv = styled(motion.div)`
     margin-right:20rem;
     flex: 2.25;
     .heading-text{

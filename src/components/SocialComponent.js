@@ -4,10 +4,13 @@ import styled from 'styled-components';
 import { AiFillInstagram, AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 
+import {motion} from 'framer-motion';
+import { titleAnimation } from '../animation';
+
 export default function SocialComponent() {
 
     return (
-        <StyledSocialDiv>
+        <StyledSocialDiv variants={titleAnimation}>
             <StyledSocialSpan>
             <a href="https://www.linkedin.com/in/prathmeshsadake" target="_blank" rel="noreferrer noopener" className="social-icon" ><AiFillLinkedin size='40'/></a>
             <a href="mailto:prathmeshsadake@gmail.com" target="_blank" rel="noreferrer noopener" className="social-icon" ><SiGmail size="40"/></a>
@@ -19,7 +22,7 @@ export default function SocialComponent() {
     );
 }
 
-const StyledSocialDiv = styled.div`
+const StyledSocialDiv = styled(motion.div)`
 display:flex;
 color: #000;
 text-align:center;

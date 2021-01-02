@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import {motion} from 'framer-motion';
+
 export const StyledDiv = styled.div`
     min-height: 90vh;
     padding: 0rem 8rem;
@@ -17,7 +19,7 @@ export const StyledDiv = styled.div`
     }
 `;
 
-export const StyledLine = styled.div`
+export const StyledLine = styled(motion.div)`
 height: 2px;
 background-color: #66fcf1;
 width: 100%;

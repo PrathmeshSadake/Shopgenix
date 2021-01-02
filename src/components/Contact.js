@@ -6,16 +6,19 @@ import SocialComponent from './SocialComponent';
 import { Wave2 } from './Wave';
 // import contact from '../img/contact.svg';
 
+import {motion} from 'framer-motion';
+import { titleAnimation, lineAnimation } from '../animation';
+
 const Contact =()=>{
     return(
         <StyledContact>
             <ContactSection >
-                <h2 className="heading-contact">Get in Touch</h2>
-                <h4 className="description-contact">If you have any questions please feel free to drop me a line. I will get back to you as soon as I can. That's a promise</h4>
-                <StyledLine/>
+                <motion.h2 variants={titleAnimation} className="heading-contact">Get in Touch</motion.h2>
+                <motion.h4 variants={titleAnimation} className="description-contact">If you have any questions please feel free to drop me a line. I will get back to you as soon as I can. That's a promise</motion.h4>
+                <StyledLine variants={lineAnimation}/>
                 <SocialComponent/>
-        <h4 className="credits-contact">Designed, Developed & Maintained by Prathmesh Sadake</h4>
-        <h4 className="footer-contact">Made with <span style={{color:'red'}}>&hearts;</span>  2021</h4>
+        <motion.h4 variants={titleAnimation} className="credits-contact">Designed, Developed & Maintained by Prathmesh Sadake</motion.h4>
+        <motion.h4 variants={titleAnimation} className="footer-contact">Made with <span style={{color:'red'}}>&hearts;</span>  2021</motion.h4>
             </ContactSection>
             <Wave2/>
 </StyledContact>
