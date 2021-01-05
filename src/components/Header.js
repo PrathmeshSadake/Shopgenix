@@ -4,7 +4,7 @@ import { StyledDiv } from '../styles';
 
 import { Wave } from './Wave';
 
-import headerImg from '../img/header.svg';
+import headerImg from '../img/header.jpg';
 import { Link } from 'react-router-dom';
 
 
@@ -17,7 +17,7 @@ const Header = () => {
                     <Wave/>
             <TextBoxDiv variants={titleAnimation}>
                     <motion.h2 variants={titleAnimation} className="heading-text">
-                        Hello, I'm <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
+                        Hello,<br className="break"></br> I'm <span className="name">Prathmesh Sadake,</span> I'm a multi-disciplinary and a design-minded frontend web and mobile app developer.
                     </motion.h2>
                     <motion.button variants={fade}>
                         <Link className="btn-primary" to='/about'>
@@ -33,22 +33,25 @@ const Header = () => {
 }
 
 const TextBoxDiv = styled(motion.div)`
-    margin-right:20rem;
-    flex: 2.25;
+    margin-right: 5rem;
+    flex: 2.5;
     .heading-text{
-        letter-spacing: 1.5px;
-        line-height:125%;
+        letter-spacing: 1.25px;
+        line-height:110%;
         word-wrap:break-word;
         margin-bottom: 2.5rem;
     }
     @media (max-width: 1200px){
     margin: 0rem;
-    padding: 0 2rem 5rem 2rem;
+    padding: 0 1.5rem 5rem 1.5rem;
     text-align: center;
     .heading-text{
         line-height:110%;
         word-wrap: word-break;
         font-size: 2.5rem;
+    }
+    .break{
+        display: none;
     }
     }
     @media (max-width: 700px){
