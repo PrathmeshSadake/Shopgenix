@@ -69,7 +69,7 @@ const StyledImgDiv = styled.div`
     
     img{
         margin: 3rem 1.5rem;
-        height: auto; 
+        height: 350px; 
     }
     }
 `;
