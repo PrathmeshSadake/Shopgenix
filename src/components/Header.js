@@ -68,8 +68,8 @@ const StyledImgDiv = styled.div`
         justify-content: center;
     
     img{
-        margin: 3rem auto;
-        height: 350px;
+        margin: 3rem 1.5rem;
+        height: auto; 
     }
     }
 `;
