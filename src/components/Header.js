@@ -69,7 +69,7 @@ const StyledImgDiv = styled.div`
     
     img{
         margin: 3rem 1.5rem;
-        height: 350px; 
+        width: 90%;
     }
     }
 `;
