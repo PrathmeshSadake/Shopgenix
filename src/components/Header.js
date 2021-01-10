@@ -64,13 +64,13 @@ const TextBoxDiv = styled(motion.div)`
 const StyledImgDiv = styled.div`
     flex: 1;
     img{
-        width: 90%;
+        width: 95%;
         height: auto;
     }
     @media (max-width: 1200px){
         text-align: center;
         justify-content: center;
-        margin: 3rem 1.5rem;
+        margin: 3rem 1rem;
     }
 `;
 
