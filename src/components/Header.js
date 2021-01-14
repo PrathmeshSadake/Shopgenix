@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 import logo from '../img/logo.svg';
 import headerImg from '../img/header.svg';
 import { StyledDiv } from '../styles';
+import Wave from './Wave';
 
 function Header(){
     return(
@@ -11,9 +12,8 @@ function Header(){
             <StyledNav>
                 <h1><img src={logo} alt='logo' height="25px"/> Prathmesh Sadake</h1>
                 <ul>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </StyledNav>
             <StyledDiv>
@@ -22,10 +22,12 @@ function Header(){
                     <h4>Hi, my name is Prathmesh.</h4>
                     <h2>I'm a multi-disciplinary and a design-minded frontend web and mobile app developer with specializing in flutter app development and React.js .</h2>
                     <div className="btn-div">
-                        <a className="btn btn-filled" href="w">LET'S CHAT</a>
-                        <a className="btn btn-stroke" href="w">ABOUT</a>
+                        <Link className="btn btn-filled" to="/contact">LET'S CHAT</Link>
+                        <Link className="btn btn-stroke" to="/projects">ABOUT</Link>
                     </div>
                 </StyledTextBox>
+
+            <Wave/>
             </StyledDiv>
         </StyledHeader>
     );
@@ -80,6 +82,7 @@ export const StyledHeader = styled.div`
 const StyledTextBox = styled.div`
     width: 90%;
     padding-left: 10rem;
+    z-index: 5;
     h4{
         margin-bottom: 1.5rem;
         font-size: 2rem;
