@@ -40,15 +40,15 @@ const GlobalStyle = createGlobalStyle`
             background-color: #66fcf1;
             color: #000;
         }
-        a{text-decoration: none;
-            color: #fff;
+        /* a{text-decoration: none;
+            /* color: #fff; */
         }
         @media (max-width:1300px){
             a{text-decoration: none;
                 font-size: 2rem;
             text-transform: capitalize;
-            color: #fff;
-        }
+            /* color: #fff; */
+        } */
            
         }
     }
@@ -66,9 +66,6 @@ const GlobalStyle = createGlobalStyle`
         font-size:2rem;
         color:#66fcf1;
     }
-    h5{
-        color: white;
-    }
     a{
         font-size: 1.1rem;
     }
@@ -78,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
     }
     p{
         padding: 1rem 0rem;
-        color: #c5c6c7;
+        /* color: #c5c6c7; */
         font-size: 1.4rem;
         line-height: 150%;
         @media (max-width: 760px){
