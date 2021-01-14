@@ -32,10 +32,18 @@ const StyledContact = styled.div`
 
 const ContactSection = styled.div`
     flex: 1;
+    h2{
+        margin-bottom: 1.5rem;
+        font-size: 3rem;
+    }
+    h4{
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
 `;
 const FormSection = styled.div`
-    padding-left: 20rem;
-    flex: 1.5;
+    padding-left: 10rem;
+    flex: 1.25;
     h2{
         margin-bottom: .5rem;
     }
