@@ -58,9 +58,14 @@ const StyledForm = styled.form`
     width: 150px;
   border: none;
   color: white;
-  padding: 16px 15px;
+  font-size: 1.2rem;
+  padding: 14px 15px;
   text-decoration: none;
   margin: 1rem 2px;
   cursor: pointer;
+  transition: all .75s ease-in;
+  &:hover{
+    background-color: #0700eb;
+  }
     }
 `;
