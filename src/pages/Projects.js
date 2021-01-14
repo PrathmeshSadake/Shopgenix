@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from  'styled-components';
-import { IoIosArrowBack } from "react-icons/io";
+
 // Importing Components
 import ProjectComponent from '../components/Project';
+import Nav from '../components/Nav';
 
 
 const ProjectsPage = () => {
@@ -27,7 +28,7 @@ const ProjectsPage = () => {
     ];
     return(
         <StyledProjectPage >
-            <IoIosArrowBack size="50" color="black" style={{marginLeft:"-8rem", marginBottom:"3rem"}}/>
+            <Nav/>
         <h1  className="title">Featured Projects</h1>
         {projects.map((project)=> 
         <ProjectComponent project={project} />)}
@@ -36,17 +37,19 @@ const ProjectsPage = () => {
 }
 
 const StyledProjectPage = styled.div`
-    padding: 2rem 10rem;
+    padding: 0rem 10rem;
     background: #F7FAFF;
 
-    h1{
+    .title{
 /* text-align: center; */
+width: 50%;
         font-size: 3rem;
-        
+        margin-top: 3rem;
+        border-bottom: 2px solid #0965f1;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-        letter-spacing: 4px;
-        color: #66fcf1;
+        letter-spacing: 3px;
+        color: #4A65F2;
     }
 `;
 
