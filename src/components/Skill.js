@@ -14,7 +14,7 @@ const StyledSkill = styled.div`
     display: inline;
     color: white;
     color: #000;
-    margin: 20px 20px 0 0;
+    margin: 10px 20px 0 0;
     border: 1px solid #a0a0a0;
     box-shadow: 2px 2px #a0a0a0;
     text-transform: uppercase;

@@ -9,17 +9,17 @@ function Services(){
     const ServicesData = [
         {
             "title": 'web development',
-            "description": 'React is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications',
+            "description": 'Majority of my projects are Frontend related where I use React as a primary technology for developing Frontend Application. Apart from ReactJS I have also used Technologies like HTML, CSS/SCSS, Javascript, Bootstrap, NodeJS, ExpressJS and a bit of MongoDB.',
             "imageUrl": process.env.PUBLIC_URL + 'images/react.svg',
         },
         {
             "title": 'Flutter Development',
-            "description": 'React is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications',
+            "description": 'I also develop cross-platform Mobile Applications using Flutter framework. Mainly focusing on developing beautiful flutter UIs, working with APIs and State management using Provider package. I have created couple of flutter projects which are listed on Projects page.',
             "imageUrl": process.env.PUBLIC_URL + 'images/flutter.svg',
         },
         {
             "title": 'UI / UX Design',
-            "description": 'React is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications',
+            "description": 'Apart from developing beautiful Websites and Mobile apps, To improve my design thinking and also as a hobbie I design User Interfaces too. I use Figma as my major Designing tool to create beautiful User Interfaces for websites and mobile apps.',
             "imageUrl": process.env.PUBLIC_URL + 'images/figma.svg',
         } 
     ]
@@ -85,7 +85,7 @@ const StyledServices = styled.div`
 `;
 const SkillsSection = styled.div`
     display: flex;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 50%;
     flex-wrap: wrap;
 `;

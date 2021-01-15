@@ -23,7 +23,6 @@ function About(){
                 <GrTwitter color="#544FDF" size="30"/>
             </StyledSocial>
                 </StyledTextBox>
-                {/* <img className="techstack" src={techStack} alt="Technology stack" height="500px" /> */}
         </StyledAbout>
     );
 }
@@ -51,7 +50,6 @@ const StyledSocial = styled.div`
 
 const StyledTextBox = styled.div`
     width: 60%;
-    padding-right: 10rem;
     letter-spacing: 1px;
     line-height: 150%;
     h3{
