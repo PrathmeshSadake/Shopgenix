@@ -11,7 +11,7 @@ function About(){
                 <StyledTextBox>
                     <h2>A bit about me</h2>
                     <p>I'm Prathmesh, a Frontend Web Developer who loves building webpages and Software products.
-                    I'm currently pursuing B.E in Computer Science from Vishwaniketan's Institute of Technology ( Mumbai University ).
+                    I'm currently pursuing B.E in Computer Science from Vishwaniketan's Institute of Technology (Mumbai University).
                     I'm passionate about developing web pages and beautiful User-Interfaces. My hobbies include listening music and reading books.
                     I’d love to combine my passion for learning and developing with my software development skills to continue building personalized products for people.</p>
                     <h3>Why me ?</h3>
@@ -28,13 +28,17 @@ function About(){
 }
 
 const StyledAbout = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     background: #F7FAFF;
     padding: 0rem 10rem;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
+    @media (max-width: 1370px){
+        display:block;
+    padding: 4rem 1.5rem;
+    text-align:center;
+    }
 `;
 
 const StyledSocial = styled.div`
@@ -45,6 +49,10 @@ const StyledSocial = styled.div`
             &::last-child{
                 margin-right: 0rem;
             }
+    }
+    @media (max-width: 1370px){
+        display: block;
+        text-align:center;
     }
 `;
 
@@ -62,6 +70,24 @@ const StyledTextBox = styled.div`
     }
     p{
         margin-bottom: 1.5rem;
+    }
+    @media (max-width: 1370px){
+    display:block;
+    width: 100%;
+    line-height: 125%;
+
+    text-align:center;
+    h3{
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+    h2{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    p{
+        margin-bottom: 1rem;
+    }
     }
 `;
 

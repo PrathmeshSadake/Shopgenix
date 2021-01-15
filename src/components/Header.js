@@ -21,7 +21,6 @@ function Header(){
                         <Link className="btn btn-filled" to="/contact">LET'S CHAT</Link>
                     </div>
                 </StyledTextBox>
-
             <Wave/>
             </StyledDiv>
         </StyledHeader>
@@ -29,9 +28,8 @@ function Header(){
 }
 
 export const StyledHeader = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     padding: 0rem 10rem;
-    
     .btn-div{
         margin-top: 2.5rem;
         width: 40%;
@@ -60,10 +58,28 @@ export const StyledHeader = styled.div`
         padding: 9px 25px;
         border: 1px solid #5250DF;
     }
+    @media (max-width: 1370px)
+    {
+        padding: 0rem 3rem;
+        text-align: center;
+        .btn-div{
+        width: 100%;
+        margin: 2rem 0rem;
+        display: block;
+    }
+    }
 `;
 
 const StyledImageBox = styled.div`
     flex: 1;
+    @media (max-width: 1370px)
+    {
+    text-align: center;
+    margin-top: 2rem;
+        img{
+            width: 60%;
+        }
+    }
 `;
 
 const StyledTextBox = styled.div`
@@ -76,8 +92,18 @@ const StyledTextBox = styled.div`
         font-size: 2rem;
     }
     h2{
-        font-size: 2.75rem;
+    font-size: 2.75rem;
     letter-spacing: 1px;
+    }
+    @media (max-width: 1370px)
+    {
+        padding-left: 0rem;
+    width: 100%;
+        
+    /* padding: 2rem; */
+
+        /* text-align: center; */
+        
     }
 `;
 

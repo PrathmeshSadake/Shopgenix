@@ -31,4 +31,9 @@ const StyledCard = styled.div`
         letter-spacing:1px;
         text-transform: capitalize;
     }
+    @media (max-width: 700px){
+    margin-bottom: 1.5rem;    
+    padding: 30px 15px;
+
+    }
 `;

@@ -14,10 +14,10 @@ function Footer(){
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </StyledFooterNav>
-            <StyledCredits>
+            <div>
         <h1><img src={logo} alt='logo' height="25px"/> Prathmesh Sadake</h1>
         <p>&copy; 2020 Prathmesh Sadake. All Rights Reserved.</p>
-        </StyledCredits>
+        </div>
         </StyledFooter>
     );
 }
@@ -29,6 +29,15 @@ const StyledFooter = styled.footer`
     align-items: center;
     background: #d6e5fc;
     padding: 0rem 10rem;
+    @media (max-width: 700px){
+    min-height: 10vh;
+        display: block;
+        text-align:center;
+    padding: 2rem 1rem;
+        h1{
+            margin-top: 1.5rem;
+        }
+    }
 `;
 
 const StyledFooterNav = styled.div`
@@ -54,10 +63,6 @@ const StyledFooterNav = styled.div`
         }
         
     }
-`;
-const StyledCredits = styled.div`
-    /* justify-content: center;
-    align-items: center; */
 `;
 
 

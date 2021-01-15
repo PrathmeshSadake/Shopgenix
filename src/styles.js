@@ -6,5 +6,9 @@ export const StyledDiv = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-
+    @media (max-width: 1370px)
+    {
+        display: block;
+        
+        }
 `;

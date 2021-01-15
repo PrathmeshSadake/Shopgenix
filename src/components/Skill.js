@@ -19,4 +19,9 @@ const StyledSkill = styled.div`
     box-shadow: 2px 2px #a0a0a0;
     text-transform: uppercase;
     letter-spacing: 1px;
+    @media (max-width: 1370px){
+    padding: 4px 8px;
+    margin: 8px 15px 0 0;
+
+    }
 `;

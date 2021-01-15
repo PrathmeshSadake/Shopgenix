@@ -81,22 +81,40 @@ const StyledServices = styled.div`
         transform: translateY(1px);
         background: linear-gradient(to right, #5750EB, #4A65F2);
     }
+    @media (max-width: 1370px){
+        display: block;
+    padding: 3rem 1.5rem;
 
+    }
 `;
 const SkillsSection = styled.div`
     display: flex;
     margin-top: 1rem;
     width: 50%;
     flex-wrap: wrap;
+    @media (max-width: 1370px){
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content:center; */
+        width: 100%;
+    }
 `;
 const TextSection = styled.div`
     width: 60%;
+    @media (max-width: 1370px){
+        text-align:center;
+        width: 100%;
+    }
 `;
 const StyledCardsSection = styled.div`
     display:flex;
     margin-top: 5rem;
     justify-content: space-evenly;
     align-items: center;
+    @media (max-width: 1370px){
+        flex-wrap: wrap;
+    }
+
 `;
 
 
