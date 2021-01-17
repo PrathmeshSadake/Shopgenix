@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import techStack from '../img/stack.svg';
 import { GrLinkedin, GrTwitter } from "react-icons/gr";
 
 
@@ -46,7 +45,7 @@ const StyledSocial = styled.div`
     margin-top: 2rem;
     svg{
         margin-right: 2rem;
-            &::last-child{
+            &:last-child{
                 margin-right: 0rem;
             }
     }
@@ -79,7 +78,7 @@ const StyledTextBox = styled.div`
     text-align:center;
     h3{
         margin-bottom: 1rem;
-        font-size: 1.25rem;
+        font-size: 1.35rem;
     }
     h2{
         font-size: 2rem;
@@ -87,6 +86,7 @@ const StyledTextBox = styled.div`
     }
     p{
         margin-bottom: 1rem;
+        font-size: 1rem;
     }
     }
 `;
