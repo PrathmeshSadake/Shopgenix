@@ -66,8 +66,16 @@ export const StyledHeader = styled.div`
         width: 100%;
         margin: 2rem 0rem;
         display: block;
+    }}
+    @media (max-width: 480px){
+        padding: 0rem 1.5rem;
+        .btn-div{
+        width: 100%;
+        margin: 1.5rem 0rem;
+        display: block;
     }
     }
+    
 `;
 
 const StyledImageBox = styled.div`
@@ -104,6 +112,19 @@ const StyledTextBox = styled.div`
 
         /* text-align: center; */
         
+    }
+    @media (max-width: 480px){
+        padding-left: 0rem;
+    width: 100%;
+
+        h4{
+        margin: 1.2rem 0;
+        font-size: 1.2rem;
+    }
+    h2{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    }
     }
 `;
 

@@ -26,7 +26,9 @@ export default function ContactForm() {
       <input type="text" placeholder="Subject" name="subject" />
       <label>Message</label>  
       <textarea type="text" placeholder="How can I help ?" name="message"/>
+      <div>
       <input type="submit" value="Send" />
+      </div>
     </StyledForm>
   );
 }
@@ -36,6 +38,7 @@ const StyledForm = styled.form`
     flex-direction: column;
     label{
         margin-bottom: 5px;
+        color: #4A65F2;
     }
     input[type=text]{
         width: 70%;
@@ -67,5 +70,26 @@ const StyledForm = styled.form`
   &:hover{
     background-color: #0700eb;
   }
+    }
+    @media(max-width:480px){
+      label{
+        text-align:left;
+    }
+      input[type=text]{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+  height: 150px;
+  padding: 12px 10px;
+    }
+    input[type=submit]{
+  width: 150px;
+  font-size: 1rem;
+  margin: 1rem 2px;
+    }
+    div{
+      text-align:center;
+    }
     }
 `;

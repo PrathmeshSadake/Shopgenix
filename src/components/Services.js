@@ -30,10 +30,10 @@ function Services(){
             <p>I'm a Frontend Web Developer & Computer Science Engineer who loves building webpages and Hybrid mobile apps. I design and code beautifully simple things, and I love what I do.</p>
         </TextSection>
         <SkillsSection>
-            {skills.map((skill)=><Skill skill={skill}/>)}
+            {skills.map((skill)=><Skill key={skill} skill={skill}/>)}
         </SkillsSection>
         <StyledCardsSection>
-            {ServicesData.map((data)=><Card service={data}/>)}
+            {ServicesData.map((data)=><Card key={data.title} service={data}/>)}
         </StyledCardsSection>
         <div className="btn-div">
         <Link className="btn btn-stroke" to="/projects">Projects</Link>
@@ -86,6 +86,9 @@ const StyledServices = styled.div`
     padding: 3rem 1.5rem;
 
     }
+    @media (max-width: 480px){
+    padding: 3rem 1.25rem;        
+    }
 `;
 const SkillsSection = styled.div`
     display: flex;
@@ -95,7 +98,6 @@ const SkillsSection = styled.div`
     @media (max-width: 1370px){
         display: flex;
         flex-wrap: wrap;
-        /* justify-content:center; */
         width: 100%;
     }
 `;
@@ -113,6 +115,10 @@ const StyledCardsSection = styled.div`
     align-items: center;
     @media (max-width: 1370px){
         flex-wrap: wrap;
+    }
+    @media (max-width: 480px){
+        margin-top: 3rem;
+    
     }
 
 `;

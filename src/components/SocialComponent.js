@@ -35,4 +35,12 @@ const StyledSocialSpan = styled.div`
             color:#45a293;
         }
     }
+    @media(max-width:480px){
+        display:flex;
+        width:100%;
+        justify-content:space-around;
+        .social-icon{
+        margin-right: 0rem;}
+    
+    }
 `;

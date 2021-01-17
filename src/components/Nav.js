@@ -45,4 +45,17 @@ const StyledNav = styled.nav`
             }
         }
     }
+    @media (max-width: 480px){
+        display: block;
+        padding-top: 1rem;
+        ul{
+            margin-top: 15px;
+            padding: 0 1rem;
+            justify-content: space-between;
+        li{
+            padding-left: 0rem;
+            }
+        }
+    }
+    
 `;

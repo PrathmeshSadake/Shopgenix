@@ -38,6 +38,13 @@ const StyledFooter = styled.footer`
             margin-top: 1.5rem;
         }
     }
+    @media (max-width: 1370px){
+        h1{
+            margin-top: 1.25rem;
+            font-size: 1.5rem;
+        }
+    
+    }
 `;
 
 const StyledFooterNav = styled.div`
@@ -59,9 +66,12 @@ const StyledFooterNav = styled.div`
                     color: #4A65F2;
                     border-bottom: 1.5px solid #5750EB;
                 }
-            }
-        }
-        
+            }}
+    @media (max-width: 480px){
+        justify-content: space-between;
+        li{
+        margin-right: 0rem;
+        }}
     }
 `;
 
