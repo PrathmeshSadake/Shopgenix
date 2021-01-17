@@ -41,7 +41,6 @@ const StyledProjectPage = styled.div`
     background: #F7FAFF;
 
     .title{
-/* text-align: center; */
 width: 50%;
         font-size: 3rem;
         margin-top: 3rem;
@@ -50,6 +49,17 @@ width: 50%;
     text-transform: uppercase;
         letter-spacing: 3px;
         color: #4A65F2;
+    }
+    @media(max-width:480px){
+    padding: 0rem 1rem;
+text-align: center;
+.title{
+width: 100%;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        letter-spacing: 1px;
+    }
+
     }
 `;
 

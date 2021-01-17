@@ -20,6 +20,7 @@ export default function ProjectComponent({project}) {
         <a className="btn btn-stroke" href="g">github</a>
         </div>
                     </StyledProject>
+                    <hr/>
                     </StyledProjectSection>
     );
 }
@@ -33,12 +34,15 @@ const StyledProjectSection = styled.div`
     justify-content:space-around;
     align-items:center;
     letter-spacing: 1px;
-@media (max-width: 1200px){
+@media (max-width: 992px){
         display: block;
         padding: 0rem;
         width: 100%;
         text-align: center;
     }
+@media (max-width: 480px){
+    margin: 1.5rem 0rem;
+}
 `;
 
 const StyledImgContainer = styled.div`
@@ -67,7 +71,7 @@ p{
             text-transform: uppercase;
             letter-spacing: 1.25px;
         }
-    }
+}
     .btn{
         padding: 12px 30px;
         letter-spacing: 1px;
@@ -85,6 +89,18 @@ p{
         color: #fff;
         transform: translateY(1px);
         background: linear-gradient(to right, #5750EB, #4A65F2);
+    }
+@media (max-width: 480px){
+    padding: 0;
+    .btn-div{
+    margin-bottom: 3rem;
+    }
+h2{
+    margin: 1rem 0;
+}
+p{
+    line-height: 125%;
+}
     }
 `;
 const StyledProjectsTools = styled.div`
