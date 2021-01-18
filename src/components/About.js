@@ -14,7 +14,7 @@ function About(){
                     I'm passionate about developing web pages and beautiful User-Interfaces. My hobbies include listening music and reading books.
                     I’d love to combine my passion for learning and developing with my software development skills to continue building personalized products for people.</p>
                     <h3>Why me ?</h3>
-                    <p>My short term goal is I want a such a platform where I can grow my career along with the organization's growth and My Long term goal is I want to be one of the reason for the success of the organization and I want to see my organization as a bench mark to other organizations.</p>
+                    <p>My short term goal is I want such a platform where I can grow my career along with the organization's growth and My Long term goal is I want to be one of the reason for the success of the organization and I want to see my organization as a bench mark to other organizations.</p>
                     
                     <h4>How to reach me: <a href="mailto:prathmeshsadake@gmail.com">prathmeshsadake@gmail.com</a></h4>
 <StyledSocial>
