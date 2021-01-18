@@ -43,6 +43,11 @@ const StyledAbout = styled.div`
     padding: 4rem 3rem;
     text-align:center;
     }
+    @media (max-width: 992px){
+        display:block;
+    padding: 4rem 1.5rem;
+    text-align:center;
+    }
 `;
 
 const StyledSocial = styled.div`
