@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { GrLinkedin, GrTwitter } from "react-icons/gr";
+import { GrGithub, GrInstagram, GrLinkedin, GrTwitter } from "react-icons/gr";
 
 
 function About(){
@@ -20,6 +20,8 @@ function About(){
 <StyledSocial>
                 <GrLinkedin color="#544FDF" size="30"/>
                 <GrTwitter color="#544FDF" size="30"/>
+                <GrGithub color="#544FDF" size="30"/>
+                <GrInstagram color="#544FDF" size="30"/>
             </StyledSocial>
                 </StyledTextBox>
         </StyledAbout>
@@ -33,9 +35,12 @@ const StyledAbout = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    @media (max-width: 1370px){
+    @media(max-width: 1370px){
+    padding: 0rem 5rem;
+    } 
+    @media (max-width: 992px){
         display:block;
-    padding: 4rem 1.5rem;
+    padding: 4rem 3rem;
     text-align:center;
     }
 `;

@@ -28,6 +28,9 @@ const StyledContact = styled.div`
     display:flex;
     justify-content: space-between;
     align-items:center;
+    @media(max-width: 1370px){
+    padding: 2rem 5rem 0 5rem;
+    }
     @media(max-width:480px){
         display: block;
     padding: 2rem 1rem;
@@ -64,6 +67,10 @@ const FormSection = styled.div`
     h3{
         margin-bottom: 1rem;
         color: #4A65F2;
+    }
+    @media(max-width: 1370px){
+        padding-left: 5rem;
+    
     }
     @media(max-width:480px){
     margin-top: 2rem;

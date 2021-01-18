@@ -71,6 +71,18 @@ const StyledForm = styled.form`
     background-color: #0700eb;
   }
     }
+    @media(max-width: 1370px){
+
+      input[type=text]{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+    input[type=submit]{
+  width: 150px;
+    }
+    }
     @media(max-width:480px){
       label{
         text-align:left;

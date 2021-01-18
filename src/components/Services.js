@@ -81,9 +81,12 @@ const StyledServices = styled.div`
         transform: translateY(1px);
         background: linear-gradient(to right, #5750EB, #4A65F2);
     }
-    @media (max-width: 1370px){
+    @media(max-width: 1370px){
+        padding: 5rem 3rem;
+    } 
+    @media (max-width: 992px){
         display: block;
-    padding: 3rem 1.5rem;
+        padding: 3rem 1.5rem;
 
     }
     @media (max-width: 480px){
@@ -98,6 +101,7 @@ const SkillsSection = styled.div`
     @media (max-width: 1370px){
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
     }
 `;

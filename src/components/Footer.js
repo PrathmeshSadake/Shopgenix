@@ -29,6 +29,9 @@ const StyledFooter = styled.footer`
     align-items: center;
     background: #d6e5fc;
     padding: 0rem 10rem;
+    @media(max-width: 1370px){
+    padding: 0rem 5rem;
+    }
     @media (max-width: 700px){
     min-height: 10vh;
         display: block;

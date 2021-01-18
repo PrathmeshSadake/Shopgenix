@@ -61,12 +61,21 @@ export const StyledHeader = styled.div`
     @media (max-width: 1370px)
     {
         padding: 0rem 3rem;
-        text-align: center;
+        
         .btn-div{
         width: 100%;
         margin: 2rem 0rem;
         display: block;
     }}
+    @media(max-width: 992px){
+        padding: 0rem 2rem;
+        text-align: center;
+        .btn-div{
+        width: 100%;
+        margin: 1.5rem 0rem;
+        display: block;
+    }
+    }
     @media (max-width: 480px){
         padding: 0rem 1.5rem;
         .btn-div{
@@ -80,7 +89,7 @@ export const StyledHeader = styled.div`
 
 const StyledImageBox = styled.div`
     flex: 1;
-    @media (max-width: 1370px)
+    @media (max-width: 992px)
     {
     text-align: center;
     margin-top: 2rem;
@@ -107,6 +116,10 @@ const StyledTextBox = styled.div`
     {
         padding-left: 0rem;
     width: 100%;
+    h2{
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    }
         
     /* padding: 2rem; */
 
