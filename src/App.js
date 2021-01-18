@@ -26,7 +26,7 @@ function App(){
         <>{
         loading ? 
         <StyledLoaderDiv>
-        <ClimbingBoxLoader  color="#4A65F2" size="50" css={override} loading={loading}/> 
+        <ClimbingBoxLoader  color="#4A65F2" css={override} loading={loading}/> 
         </StyledLoaderDiv>:
         <div>
             <Switch>
