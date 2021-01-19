@@ -50,11 +50,10 @@ const StyledAbout = styled(motion.div)`
         display:block;
     padding: 4rem 3rem;
     text-align:center;
+    min-height: 80vh;
     }
-    @media (max-width: 992px){
-        display:block;
+    @media (max-width: 480px){
     padding: 4rem 1.5rem;
-    text-align:center;
     }
 `;
 
