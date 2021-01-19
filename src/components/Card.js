@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {motion} from 'framer-motion';
-import {photoAnimation} from '../animation';
+
 
 export default function Card({ service }){
     return(
-        <StyledCard variants={photoAnimation}>
+        <StyledCard data-aos={"flip-left"}>
             <img src={service.imageUrl} alt="crd-img" height="150px"/>
             <h3>{service.title}</h3>
             <p>
