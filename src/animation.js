@@ -29,18 +29,6 @@ show:{
 } 
 }
 
-export const linksAnimation = {
-    hidden:{
-        y:-200
-    },
-show:{
-    y:0,
-    transition:{
-        duration:4,
-        ease:"easeOut"
-    }
-} 
-}
 export const emailAnimation = {
     hidden:{
    opacity: 0,
