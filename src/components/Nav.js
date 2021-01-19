@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import logo from '../img/logo.svg';
-import {nameAnimation ,linksAnimation} from '../animation';
+import {nameAnimation} from '../animation';
 import {motion} from 'framer-motion';
 
 export default function Nav() {
     return (
-        <StyledNav>
-                <Link to="/"><motion.h1 variants={nameAnimation}><img src={logo} alt='logo' height="25px"/> Prathmesh Sadake</motion.h1></Link>
-                <motion.ul variants={linksAnimation}>
+        <StyledNav variants={nameAnimation}>
+                <Link to="/"><h1><img src={logo} alt='logo' height="25px"/> Prathmesh Sadake</h1></Link>
+                <ul >
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                </motion.ul>
+                </ul>
             </StyledNav>
     );
 }
 
 
-const StyledNav = styled.nav`
+const StyledNav = styled(motion.nav)`
     height:10vh;
     display:flex;
     margin: auto ;
