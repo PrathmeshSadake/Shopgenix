@@ -34,6 +34,7 @@ function Header(){
 export const StyledHeader = styled(motion.div)`
     min-height: 100vh;
     padding: 0rem 10rem;
+    position:relative;
     .btn-div{
         margin-top: 2.5rem;
         width: 40%;

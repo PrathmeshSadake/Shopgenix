@@ -4,9 +4,7 @@ import Card from './Card';
 import Skill from './Skill';
 import {Link} from 'react-router-dom';
 
-import {fade} from '../animation';
 import {motion} from 'framer-motion';
-import { useScroll } from './useScroll';
 
 function Services(){
     const skills = ["react. JS", " flutter", "dart", "html", "css / scss", "javascript", "node. JS", "express. JS", "figma"];
@@ -27,15 +25,14 @@ function Services(){
             "imageUrl": process.env.PUBLIC_URL + 'images/figma.svg',
         } 
     ];
-    const [element, controls] = useScroll();
 
     return(
-        <StyledServices variants={fade} animate={controls} initial="hidden" ref={element}>
-        <TextSection>
+        <StyledServices>
+        <TextSection data-aos={"fade-zoom-in"}>
         <h2>What I do</h2>
             <p>I'm a Frontend Web Developer & Computer Science Engineer who loves building webpages and Hybrid mobile apps. I design and code beautifully simple things, and I love what I do.</p>
         </TextSection>
-        <SkillsSection>
+        <SkillsSection data-aos={"fade-zoom-in"}>
             {skills.map((skill)=><Skill key={skill} skill={skill}/>)}
         </SkillsSection>
         <StyledCardsSection>
@@ -111,7 +108,7 @@ const SkillsSection = styled.div`
         width: 100%;
     }
 `;
-const TextSection = styled.div`
+const TextSection = styled(motion.div)`
     width: 60%;
     @media (max-width: 1370px){
         text-align:center;

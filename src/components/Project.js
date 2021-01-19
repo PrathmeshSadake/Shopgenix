@@ -21,7 +21,7 @@ export default function ProjectComponent({project}) {
                             {project.technologies.map((tech)=><Skill skill={tech} />)}
                         </StyledProjectsTools>
                         <div className="btn-div">
-        <a className="btn btn-stroke" href="g">github</a>
+        <a className="btn btn-stroke" href={project.githubUrl}>github</a>
         </div>
                     </StyledProject>
                     <hr/>

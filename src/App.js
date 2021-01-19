@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 
 import styled from 'styled-components';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -21,6 +23,9 @@ function App(){
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
+        AOS.init({
+            duration : 2000
+          });
         setTimeout(() => { setLoading(false) }, 4000);
     });
 

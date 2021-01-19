@@ -15,7 +15,7 @@ function HomePage(){
         <Header/>
         <About/>
         <Services/>
-      <ScrollTop/>
+        <ScrollTop/>
         </motion.div>
     );
 }

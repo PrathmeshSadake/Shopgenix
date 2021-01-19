@@ -35,7 +35,7 @@ const ProjectsPage = () => {
             <Nav/>
         <h1  className="title">Featured Projects</h1>
         {projects.map((project)=> 
-        <ProjectComponent project={project} />)}
+        <ProjectComponent key={project.title} project={project} />)}
       <ScrollTop/>
         </StyledProjectPage>
     );
