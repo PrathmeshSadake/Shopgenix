@@ -6,15 +6,19 @@ import { StyledDiv } from '../styles';
 import Wave from './Wave';
 import Nav from './Nav';
 
+import {motion} from 'framer-motion';
+import {photoAnimation, fade} from '../animation';
+
+
 function Header(){
     return(
-        <StyledHeader>
+        <StyledHeader variants={fade}>
             <Nav/>
             <StyledDiv>
                 <StyledImageBox>
-                <img src={headerImg} alt="boy with laptop" width="80%"/>
+                <motion.img variants={photoAnimation} src={headerImg} alt="boy with laptop" width="80%"/>
                 </StyledImageBox>
-                <StyledTextBox>
+                <StyledTextBox variants={fade}>
                     <h4>Hi, my name is Prathmesh.</h4>
                     <h2>I'm a multi-disciplinary and a design-minded frontend web and mobile app developer with specializing in flutter app development and ReactJS.</h2>
                     <div className="btn-div">
@@ -27,7 +31,7 @@ function Header(){
     );
 }
 
-export const StyledHeader = styled.div`
+export const StyledHeader = styled(motion.div)`
     min-height: 100vh;
     padding: 0rem 10rem;
     .btn-div{

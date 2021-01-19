@@ -5,6 +5,10 @@ import styled from  'styled-components';
 import ProjectComponent from '../components/Project';
 import Nav from '../components/Nav';
 
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
+import ScrollTop from '../components/ScrollTop';
 
 const ProjectsPage = () => {
     const projects = [{
@@ -27,16 +31,17 @@ const ProjectsPage = () => {
       },
     ];
     return(
-        <StyledProjectPage >
+        <StyledProjectPage variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <Nav/>
         <h1  className="title">Featured Projects</h1>
         {projects.map((project)=> 
         <ProjectComponent project={project} />)}
+      <ScrollTop/>
         </StyledProjectPage>
     );
 }
 
-const StyledProjectPage = styled.div`
+const StyledProjectPage = styled(motion.div)`
     padding: 0rem 10rem;
     background: #F7FAFF;
 

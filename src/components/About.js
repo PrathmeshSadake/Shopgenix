@@ -4,9 +4,17 @@ import styled from 'styled-components';
 import { GrGithub, GrInstagram, GrLinkedin, GrTwitter } from "react-icons/gr";
 
 
+import {fade, photoAnimation, emailAnimation} from '../animation';
+import {motion} from 'framer-motion';
+import { useScroll } from './useScroll';
+
+
+
 function About(){
+    const [element, controls] = useScroll();
+
     return(
-        <StyledAbout>
+        <StyledAbout variants={fade} animate={controls} initial="hidden" ref={element}>
                 <StyledTextBox>
                     <h2>A bit about me</h2>
                     <p>I'm Prathmesh, a Frontend Web Developer who loves building webpages and Software products.
@@ -16,8 +24,8 @@ function About(){
                     <h3>Why me ?</h3>
                     <p>My short term goal is I want such a platform where I can grow my career along with the organization's growth and My Long term goal is I want to be one of the reason for the success of the organization and I want to see my organization as a bench mark to other organizations.</p>
                     
-                    <h4>How to reach me: <a href="mailto:prathmeshsadake@gmail.com">prathmeshsadake@gmail.com</a></h4>
-<StyledSocial>
+                    <h4>How to reach me: <motion.a variants={emailAnimation} href="mailto:prathmeshsadake@gmail.com">prathmeshsadake@gmail.com</motion.a></h4>
+<StyledSocial variants={photoAnimation}>
                 <GrLinkedin color="#544FDF" size="30"/>
                 <GrTwitter color="#544FDF" size="30"/>
                 <GrGithub color="#544FDF" size="30"/>
@@ -28,7 +36,7 @@ function About(){
     );
 }
 
-const StyledAbout = styled.div`
+const StyledAbout = styled(motion.div)`
     min-height: 100vh;
     background: #F7FAFF;
     padding: 0rem 10rem;
@@ -50,7 +58,7 @@ const StyledAbout = styled.div`
     }
 `;
 
-const StyledSocial = styled.div`
+const StyledSocial = styled(motion.div)`
     display: flex;
     margin-top: 2rem;
     svg{

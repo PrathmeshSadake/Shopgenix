@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {motion} from 'framer-motion';
+import {photoAnimation} from '../animation';
 
 export default function Card({ service }){
     return(
-        <StyledCard>
+        <StyledCard variants={photoAnimation}>
             <img src={service.imageUrl} alt="crd-img" height="150px"/>
             <h3>{service.title}</h3>
             <p>
@@ -14,7 +16,7 @@ export default function Card({ service }){
     );
 }
 
-const StyledCard = styled.div`
+const StyledCard = styled(motion.div)`
     min-height: 425px;
     max-width: 350px;
     overflow-x: hidden;

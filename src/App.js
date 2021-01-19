@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './app.css';
 import { css } from "@emotion/core";
 import HomePage from './pages/Home';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/Projects';
@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 
 import styled from 'styled-components';
 
+
+import { AnimatePresence } from 'framer-motion';
 
 const override = css`
     display: block;
@@ -22,6 +24,8 @@ function App(){
         setTimeout(() => { setLoading(false) }, 4000);
     });
 
+const location = useLocation();
+
     return(
         <>{
         loading ? 
@@ -29,7 +33,8 @@ function App(){
         <ClimbingBoxLoader  color="#4A65F2" css={override} loading={loading}/> 
         </StyledLoaderDiv>:
         <div>
-            <Switch>
+      <AnimatePresence exitBeforeEnter>
+            <Switch location={location} key={location.pathname}>
                 <Route exact path='/'>
             <HomePage/>
                 </Route>
@@ -40,6 +45,7 @@ function App(){
             <ContactPage/>
                 </Route>
             </Switch>
+      </AnimatePresence>
         <Footer/>
         </div>
         }

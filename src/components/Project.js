@@ -2,13 +2,17 @@ import React from 'react'
 
 import styled from 'styled-components';
 import Skill from './Skill';
+import {motion} from 'framer-motion';
+import {photoAnimation, fade} from '../animation';
+
+
 export default function ProjectComponent({project}) {    
     return (
-                    <StyledProjectSection >
+                    <StyledProjectSection variants={fade}>
                     <StyledImgContainer>
-                        <img  src={project.imageUrl} alt="" width='90%'/>
+                        <motion.img variants={photoAnimation} src={project.imageUrl} alt="" width='90%'/>
                     </StyledImgContainer>
-                    <StyledProject>
+                    <StyledProject variants={fade}>
                     <h1>{project.title}</h1>
                     <h2>{project.subtitle}</h2>
                         <p>{project.description}</p>
@@ -27,7 +31,7 @@ export default function ProjectComponent({project}) {
 
 
 
-const StyledProjectSection = styled.div`
+const StyledProjectSection = styled(motion.div)`
     min-height: 70vh;
     padding: 0rem 5rem;
     display:flex;
@@ -45,11 +49,11 @@ const StyledProjectSection = styled.div`
 }
 `;
 
-const StyledImgContainer = styled.div`
+const StyledImgContainer = styled(motion.div)`
 flex: 1.15;
 `;
 
-const StyledProject = styled.div`
+const StyledProject = styled(motion.div)`
 flex: 1;
 padding: 0 2rem;
 h1{

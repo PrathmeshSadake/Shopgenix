@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import logo from '../img/logo.svg';
+import {nameAnimation ,linksAnimation} from '../animation';
+import {motion} from 'framer-motion';
 
 export default function Nav() {
     return (
         <StyledNav>
-                <Link to="/"><h1><img src={logo} alt='logo' height="25px"/> Prathmesh Sadake</h1></Link>
-                <ul>
+                <Link to="/"><motion.h1 variants={nameAnimation}><img src={logo} alt='logo' height="25px"/> Prathmesh Sadake</motion.h1></Link>
+                <motion.ul variants={linksAnimation}>
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                </ul>
+                </motion.ul>
             </StyledNav>
     );
 }

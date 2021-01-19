@@ -4,6 +4,10 @@ import Card from './Card';
 import Skill from './Skill';
 import {Link} from 'react-router-dom';
 
+import {fade} from '../animation';
+import {motion} from 'framer-motion';
+import { useScroll } from './useScroll';
+
 function Services(){
     const skills = ["react. JS", " flutter", "dart", "html", "css / scss", "javascript", "node. JS", "express. JS", "figma"];
     const ServicesData = [
@@ -22,9 +26,11 @@ function Services(){
             "description": 'Apart from developing beautiful Websites and Mobile apps, To improve my design thinking and also as a hobbie I design User Interfaces too. I use Figma as my major Designing tool to create beautiful User Interfaces for websites and mobile apps.',
             "imageUrl": process.env.PUBLIC_URL + 'images/figma.svg',
         } 
-    ]
+    ];
+    const [element, controls] = useScroll();
+
     return(
-        <StyledServices>
+        <StyledServices variants={fade} animate={controls} initial="hidden" ref={element}>
         <TextSection>
         <h2>What I do</h2>
             <p>I'm a Frontend Web Developer & Computer Science Engineer who loves building webpages and Hybrid mobile apps. I design and code beautifully simple things, and I love what I do.</p>
@@ -42,7 +48,7 @@ function Services(){
     );
 }
 
-const StyledServices = styled.div`
+const StyledServices = styled(motion.div)`
     padding: 7rem 10rem;
     display: flex;
     flex-direction: column;

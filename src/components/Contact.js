@@ -4,15 +4,18 @@ import SocialComponent from './SocialComponent';
 
 import ContactForm from './ContactForm';
 
+import {motion} from 'framer-motion';
+import {fade} from '../animation';
+
 const Contact =()=>{
     return(
         <StyledContact>
-            <ContactSection >
+            <ContactSection variants={fade}>
                 <h2 className="heading-contact">Get in Touch</h2>
                 <h4 className="description-contact">If you have any questions please feel free to drop me a line. I will get back to you as soon as I can. That's a promise.</h4>
                 <SocialComponent/>
             </ContactSection>
-            <FormSection>
+            <FormSection variants={fade}>
                 <h2>Got a project?</h2>
                 <h3>Let's Talk!</h3>
                 <ContactForm/>
@@ -38,7 +41,7 @@ const StyledContact = styled.div`
     }
 `;
 
-const ContactSection = styled.div`
+const ContactSection = styled(motion.div)`
     flex: 1;
     h2{
         margin-bottom: 1.5rem;
@@ -58,7 +61,7 @@ const ContactSection = styled.div`
     }
     }
 `;
-const FormSection = styled.div`
+const FormSection = styled(motion.div)`
     padding-left: 10rem;
     flex: 1.25;
     h2{
