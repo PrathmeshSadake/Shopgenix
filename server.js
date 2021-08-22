@@ -5,6 +5,7 @@ require("dotenv").config();
 const productsRoute = require("./routes/productsRoute");
 
 const app = express();
+app.use(express.json());
 app.use("/api/products/", productsRoute);
 
 const port = process.env.PORT;

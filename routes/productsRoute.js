@@ -7,8 +7,16 @@ router.get("/getallproducts", async (req, res) => {
     Product.find({}, (err, docs) => {
       res.json({ products: docs });
     });
-    // console.log(products);
-    // res.json({ products });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+router.post("/getproductbyid", async (req, res) => {
+  try {
+    Product.findById(req.body.productid, (err, docs) => {
+      res.send(docs);
+    });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
