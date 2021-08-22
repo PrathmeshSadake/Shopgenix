@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
-    <Link to={`/product/${product.id}`}>
+    <Link to={`/product/${product._id}`}>
       <div className="flex justify-center border-2 h-full border-yellow-300">
         <div className="container flex justify-center">
           <div className="max-w-sm">

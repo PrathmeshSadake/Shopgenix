@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../components/ProductCard";
-import axios from "axios";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { getAllProducts } from "../redux/actions/productsActions";
 
 const HomeScreen = () => {
-  const [products, setproducts] = useState([]);
+  const getAllProductsState = useSelector((state) => state.products);
+  const { data, loading, error } = getAllProductsState;
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    axios
-      .get("/api/products/getallproducts")
-      .then((res) => {
-        setproducts(res.data.products);
-      })
-      .catch((err) => console.error(err));
-  }, [products]);
+    dispatch(getAllProducts());
+    // eslint-disable-next-line
+  }, []);
   return (
     <div className="p-8 max-w-screen-xl mx-auto">
-      {products.length > 0 ? (
-        <div className="px-4 flex flex-col md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-4">
-          {products.map((product) => (
+      {data && (
+        <div className="px-4 flex flex-col md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-3">
+          {data.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
         </div>
-      ) : (
-        <LoadingSpinner />
       )}
+      {loading && <LoadingSpinner />}
+      {error && <h1>{error.message}</h1>}
     </div>
   );
 };
