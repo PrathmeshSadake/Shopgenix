@@ -84,7 +84,7 @@ const ProductDescriptionScreen = ({ match }) => {
                       !data.countInStock
                         ? "bg-yellow-100 cursor-default"
                         : "bg-yellow-300 hover:opacity-100"
-                    } opacity-75  text-indigo-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold`}
+                    } opacity-75  text-blue-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold`}
                   >
                     <i className="mdi mdi-cart -ml-2 mr-2"></i> ADD TO CART
                   </button>

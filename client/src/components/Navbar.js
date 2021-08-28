@@ -1,53 +1,72 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
   const addToCartReducer = useSelector((state) => state.cart);
   const { cartItems } = addToCartReducer;
   return (
-    <div className="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-      <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-        <div className="p-4 flex flex-row items-center justify-between">
+    <header class="flex flex-none items-center bg-white py-4">
+      <div class="flex flex-col text-center md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 container xl:max-w-7xl mx-auto px-4 lg:px-8">
+        <div>
           <Link
             to="/"
-            className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+            class="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-blue-600 hover:text-blue-400"
           >
-            shopgenix
-          </Link>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-          >
-            <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
-              <path d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"></path>
-              <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+            <svg
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              class="opacity-50 hi-solid hi-shopping-bag inline-block w-4 h-4 -mt-0.5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                clip-rule="evenodd"
+              ></path>
             </svg>
-          </button>
-        </div>
-        <nav
-          className={`${
-            isOpen ? "flex flex-col flex-grow pb-4" : "hidden"
-          } md:pb-0 md:flex md:justify-end md:flex-row`}
-        >
-          <a
-            className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="/"
-          >
-            Login
-          </a>
-          <Link
-            className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            to="/cart"
-          >
-            <i className="fas fa-shopping-cart"></i>
-            <span className="text-sm ml-1">{cartItems.length}</span>
+            <span>SHOPGENIX</span>
           </Link>
-        </nav>
-        {/* )} */}
+        </div>
+        <div class="flex flex-col text-center md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 md:space-x-10">
+          <nav class="space-x-4 md:space-x-6">
+            <Link
+              to="/products"
+              class="font-semibold text-gray-900 hover:text-gray-500"
+            >
+              <span>Products</span>
+            </Link>
+            <Link
+              class="font-semibold text-gray-900 hover:text-gray-500"
+              to="/cart"
+            >
+              <i className="fas fa-shopping-cart"></i>
+              <span className="text-sm ml-1">{cartItems.length}</span>
+            </Link>
+          </nav>
+          <div class="flex items-center justify-center space-x-2">
+            <Link
+              to="/signin"
+              class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none"
+            >
+              <span>Sign In</span>
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                class="opacity-50 hi-solid hi-arrow-right inline-block w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 
